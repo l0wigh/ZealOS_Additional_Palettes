@@ -4,9 +4,7 @@ DocClear;
 if (YorN)
 {
 	CopyTree("ZOSAddPalettes", "~/ZOSAddPalettes");
-	#import "~/ZOSAddPalettes/Zenith";
-	PaletteSetZenith;
-	"\n\nYou can now import them manually and set them with : PaletteSetNameOfPalette;\n"
+	"\n\nYou can now import them manually and set them with : PaletteSetNameOfPalette;\n";
 }
 else
 	"\nSetup aborted !\n";
