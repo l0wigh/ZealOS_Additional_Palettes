@@ -1,0 +1,26 @@
+public CBGR24 gr_palette_dracula[COLORS_NUM] = {
+	0xF8F8F2, // Base Text Color
+	0xBD93F9, // Borders
+	0x6272A4, // Comment + Command
+	0xBD93F9, // Constant
+	0xF1FA8C, // Links + Files
+	0x50FA7B, // Function Call
+	0xF1FA8C, // Sub Menu Background + Strings
+	0x44475A, // Closing Button Text + Inner Parenthesis
+	0xBD93F9, // Top Border
+	0x8BE9FD, // Types + Folder
+	0x74c7ec, // Unknown
+	0x8BE9FD, // Constant
+	0x282A36, // Closing Button Background
+	0xFFB86C, // Constant + Cursor on Text
+	0xFF5555, // Sub Text + Cursor blink + Numbers
+	0x282A36, // Background
+};
+
+public U0 PaletteSetDracula(Bool persistent=TRUE)
+{
+	GrPaletteSet(gr_palette_dracula);
+	LFBFlush;
+	if (persistent)
+		fp_set_std_palette = &PaletteSetDracula;
+}

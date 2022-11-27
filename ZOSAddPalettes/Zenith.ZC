@@ -1,0 +1,26 @@
+public CBGR24 gr_palette_zenith[COLORS_NUM] = {
+	0xFFFFFF, // Base Text Color
+	0x6095C5, // Borders
+	0x6D9E3F, // Comment + Command
+	0x3BA275, // Constant
+	0xD370A3, // Links + Files
+	0xAC7BDE, // Function Call
+	0xB58858, // Sub Menu Background + Strings
+	0x686868, // Closing Button Text + Inner Parenthesis
+	0x404040, // Top Border
+	0x98CBFE, // Types + Folder
+	0xA3D572, // Unknown
+	0x75DAA5, // Constant
+	0xFFA7DA, // Closing Button Background
+	0xE5B0FF, // Constant + Cursor on Text
+	0xEFBD8B, // Sub Text + Cursor blink + Numbers
+	0x232323, // Background
+};
+
+public U0 PaletteSetZenith(Bool persistent=TRUE)
+{
+	GrPaletteSet(gr_palette_zenith);
+	LFBFlush;
+	if (persistent)
+		fp_set_std_palette = &PaletteSetZenith;
+}

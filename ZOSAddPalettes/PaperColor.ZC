@@ -1,0 +1,26 @@
+public CBGR24 gr_palette_papercolor[COLORS_NUM] = {
+	0x444444, // Base Text Color
+	0x005F87, // Borders
+	0x878787, // Comment + Command
+	0x0087AF, // Constant
+	0x008700, // Links + Files
+	0xD70087, // Function Call
+	0x5F8700, // Sub Menu Background + Strings
+	0xCCCCCC, // Closing Button Text + Inner Parenthesis
+	0x005F87, // Top Border
+	0x8700AF, // Types + Folder
+	0x6700AF, // Unknown
+	0x005FAF, // Constant
+	0xEEEEEE, // Closing Button Background
+	0xD70000, // Constant + Cursor on Text
+	0xD75F00, // Sub Text + Cursor blink + Numbers
+	0xEEEEEE, // Background
+};
+
+public U0 PaletteSetPaperColor(Bool persistent=TRUE)
+{
+	GrPaletteSet(gr_palette_papercolor);
+	LFBFlush;
+	if (persistent)
+		fp_set_std_palette = &PaletteSetPaperColor;
+}

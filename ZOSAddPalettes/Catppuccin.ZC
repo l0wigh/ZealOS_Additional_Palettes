@@ -1,0 +1,26 @@
+public CBGR24 gr_palette_catppuccin[COLORS_NUM] = {
+	0xcdd6f4, // Base Text Color
+	0xb4befe, // Borders
+	0x7f849c, // Comment + Command
+	0x74c7ec, // Constant
+	0x94e2d5, // Links + Files
+	0x89b4fa, // Function Call
+	0xa6e3a1, // Sub Menu Background + Strings
+	0x9399b2, // Closing Button Text + Inner Parenthesis
+	0x585B70, // Top Border
+	0xf38ba8, // Types + Folder
+	0x74c7ec, // Unknown
+	0x74c7ec, // Constant
+	0xf38ba8, // Closing Button Background
+	0xf38ba8, // Constant + Cursor on Text
+	0xf38ba8, // Sub Text + Cursor blink + Numbers
+	0x1e1e2e, // Background
+};
+
+public U0 PaletteSetCatppuccin(Bool persistent=TRUE)
+{
+	GrPaletteSet(gr_palette_catppuccin);
+	LFBFlush;
+	if (persistent)
+		fp_set_std_palette = &PaletteSetCatppuccin;
+}

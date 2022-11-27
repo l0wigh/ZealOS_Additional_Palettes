@@ -1,0 +1,26 @@
+public CBGR24 gr_palette_vscode[COLORS_NUM] = {
+	0xFFFFFF, // Base Text Color
+	0x0A7ACA, // Borders
+	0x6D9E3F, // Comment + Command
+	0xC586C0, // Constant
+	0xC586C0, // Links + Files
+	0xdcdcaa, // Function Call
+	0xce9178, // Sub Menu Background + Strings
+	0x2E2E2E, // Closing Button Text + Inner Parenthesis
+	0x0A7ACA, // Top Border
+	0x47B29B, // Types + Folder
+	0x47B29B, // Unknown
+	0xC586C0, // Constant
+	0x1E1E1E, // Closing Button Background
+	0x47B29B, // Constant + Cursor on Text
+	0xB5CEA8, // Sub Text + Cursor blink + Numbers
+	0x1E1E1E, // Background
+};
+
+public U0 PaletteSetVSCode(Bool persistent=TRUE)
+{
+	GrPaletteSet(gr_palette_vscode);
+	LFBFlush;
+	if (persistent)
+		fp_set_std_palette = &PaletteSetVSCode;
+}
