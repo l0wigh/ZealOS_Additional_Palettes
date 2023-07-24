@@ -7,7 +7,7 @@ public CBGR24 gr_palette_vscode[COLORS_NUM] = {
 	0xdcdcaa, // Function Call
 	0xce9178, // Sub Menu Background + Strings
 	0x2E2E2E, // Closing Button Text + Inner Parenthesis
-	0x0A7ACA, // Top Border
+	0x474747, // Top Border + Wallpaper
 	0x47B29B, // Types + Folder
 	0x47B29B, // Unknown
 	0xC586C0, // Constant
